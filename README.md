@@ -1,4 +1,4 @@
-# Football-Manager-Simulator (FMS)
+ # Football-Manager-Simulator (FMS)
 Prosty symulator menadżera piłkarskiego. Do wyboru trzy ligi i ich najlepsze, "złote" okresy. Wcielasz się w prawdziwego menadżera danego zespołu w tamtych czasach.
 1. Serie A - 1999/2000 (Lazio, Juventus, AC Milan, Inter, Parma, AS Roma, Fiorentina, Udinese.)
 2. Premier League - 2003/2004 (Arsenal, Chelsea, Manchester United, Liverpool, Newcastle, Aston Villa, Charlton, Bolton.)
