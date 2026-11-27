@@ -11,4 +11,6 @@ enum class TacticStyle {
   POSSESSION
 };
 
+enum class FormationType { F442, F433, F352, F532, F451 };
+
 #endif

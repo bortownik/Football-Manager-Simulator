@@ -1,8 +1,10 @@
 #include <iostream>
+#include <iomanip>
 
 #include "field_player.h"
 #include "player.h"
 #include "goalkeeper.h"
+#include "manager.h"
 
 void showPlayer(const Player& player) {
   std::cout << player << "\n";
@@ -22,5 +24,27 @@ int main() {
   showPlayer(nesta);
   showPlayer(buffon);
   std::cout << "  fit GK " << buffon.positionFit(Position::GK) << ", fit DEF " << buffon.positionFit(Position::DEF) << "\n";
+
+    Manager mourinho("Jose Mourinho", TacticStyle::COUNTER);
+  Manager guardiola("Pep Guardiola", TacticStyle::POSSESSION);
+
+  std::cout << mourinho.name() << " - "
+            << Manager::styleLabel(mourinho.preferredStyle()) << "\n";
+  std::cout << "  "
+            << Manager::styleDescription(mourinho.preferredStyle())
+            << "\n";
+
+  std::cout << std::fixed << std::setprecision(2);
+  std::cout << "  bonus kontra "
+            << mourinho.styleBonus(TacticStyle::COUNTER)
+            << ", bonus ofensywna "
+            << mourinho.styleBonus(TacticStyle::ATTACKING) << "\n";
+  std::cout << "  zgodny z kontra: "
+            << mourinho.matchesStyle(TacticStyle::COUNTER)
+            << ", z posiadaniem: "
+            << mourinho.matchesStyle(TacticStyle::POSSESSION) << "\n";
+
+  std::cout << guardiola.name() << " - "
+            << Manager::styleLabel(guardiola.preferredStyle()) << "\n";
   return 0;
 }
